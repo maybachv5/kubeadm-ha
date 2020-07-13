@@ -21,7 +21,7 @@
     - /etc/kubernetes/manifests
 
   - name: 在 etcd 节点拉取相关镜像
-    shell: docker pull {{ item }}
+    shell: docker pull {{ item }} --platform={{ host_architecture }}
     with_items:
     - "{{ etcd_image }}"
     - "{{ pod_infra_container_image }}"
