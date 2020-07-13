@@ -11,7 +11,7 @@
 
 - include_tasks: debian.yml
   when: 
-  - ansible_distribution in [ 'Ubuntu','Debian' ]
+  - ansible_distribution in [ 'Ubuntu','Debian','uos' ]
   - '"active" not in docker_already_running.stdout'
 
 # 公共系统参数设置

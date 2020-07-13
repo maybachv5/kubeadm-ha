@@ -3,7 +3,7 @@
   when: ansible_distribution in [ 'CentOS','OracleLinux','RedHat' ]
 
 - include_tasks: debian.yml
-  when: ansible_distribution in [ 'Ubuntu','Debian' ]
+  when: ansible_distribution in [ 'Ubuntu','Debian','uos' ]
 
 - name: 配置 kubectl 命令行自动补全
   shell: kubectl completion bash > /usr/share/bash-completion/completions/kubectl

@@ -6,6 +6,7 @@
   "insecure-registries": [{% for registry in docker_insecure_registries %}"{{ registry }}"{% if not loop.last %},{% endif %}{% endfor %}],
 {% endif %}
   "max-concurrent-downloads": {{ docker_max_concurrent_downloads | int }},
+  "experimental": true,
   "log-driver": "{{ docker_log_driver }}",
   "log-level": "{{ docker_log_level }}",
   "log-opts": {

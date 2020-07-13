@@ -14,4 +14,4 @@
   when: ansible_distribution in [ 'CentOS','OracleLinux','RedHat' ]
 
 - include_tasks: debian.yml
-  when: ansible_distribution in [ 'Ubuntu','Debian' ]
+  when: ansible_distribution in [ 'Ubuntu','Debian','uos' ]

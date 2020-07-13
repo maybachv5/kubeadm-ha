@@ -30,11 +30,11 @@ kubernetes_yum_repo: https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-
 
 # Debian apt源仓库
   # 基础软件源
-# base_apt_repo: deb http://mirrors.aliyun.com/{{ ansible_distribution | lower }}/ {{ ansible_distribution_release }} main restricted universe multiverse
+# base_apt_repo: deb http://mirrors.aliyun.com/{{ host_distribution | lower }}/ {{ host_distribution_release }} main restricted universe multiverse
   # docker-ce源
-docker_apt_repo: deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
+docker_apt_repo: "deb [arch={{ host_architecture }}] https://mirrors.aliyun.com/docker-ce/linux/{{ host_distribution | lower }} {{ host_distribution_release }} stable"
   # kubernetes源
-kubernetes_apt_repo: deb [arch=amd64] https://mirrors.aliyun.com/kubernetes/apt kubernetes-xenial main
+kubernetes_apt_repo: deb https://mirrors.aliyun.com/kubernetes/apt kubernetes-xenial main
 
 # ------------------------ #
 # Docker 相关参数配置

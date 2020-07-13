@@ -2,7 +2,7 @@
   when: ansible_distribution in [ 'CentOS','OracleLinux','RedHat' ]
 
 - include_tasks: ubuntu.yml
-  when: ansible_distribution in [ 'Ubuntu','Debian' ]
+  when: ansible_distribution in [ 'Ubuntu','Debian','uos' ]
 
 - name: 需手动重启服务器
   debug:
