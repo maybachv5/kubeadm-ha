@@ -162,7 +162,7 @@ spec:
                   - key: beta.kubernetes.io/arch
                     operator: In
                     values:
-                      - amd64
+                      - {{ host_architecture }}
       hostNetwork: true
       tolerations:
       - operator: Exists
