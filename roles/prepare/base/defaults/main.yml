@@ -51,7 +51,7 @@ host_distribution: >-
   {%- endif -%}
 
 host_distribution_release: >-
-  {%- if (ansible_distribution_release is not defined) or (ansible_distribution_release == '') -%}
+  {%- if (ansible_distribution_release == 'n/a') or (ansible_distribution_release is not defined) or (ansible_distribution_release == '') -%}
   buster
   {%- else -%}
   {{ ansible_distribution_release }}
