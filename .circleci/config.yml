@@ -21,6 +21,7 @@ jobs:
           osixia/keepalived:2.0.20
           registry.access.redhat.com/rhel7/pod-infrastructure:latest
           quay.io/coreos/flannel:v0.12.0-amd64
+          quay.io/coreos/flannel:v0.12.0-arm64
           calico/typha:v3.13.2
           calico/cni:v3.13.2
           calico/node:v3.13.2
