@@ -15,6 +15,8 @@
   "data-root": "{{ docker_storage_dir }}",
   "exec-opts": ["native.cgroupdriver=systemd"],
   "storage-driver": "overlay2",
+  "live-restore": true,
+  "oom-score-adjust": -1000,
   "storage-opts": [
     "overlay2.override_kernel_check=true"
   ]
